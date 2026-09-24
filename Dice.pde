@@ -17,7 +17,7 @@ void draw()
     }
   }
   fill(242, 53, 141);
-  text(total, 300, 550);
+  text(total, 350, 550);
 }
 void mousePressed()
 {
