@@ -3,18 +3,21 @@ void setup()
   //dice is 40x40
   size(600,600);
   noLoop();
-  background(247, 193, 218);
 }
 void draw()
 {
   //your code here
+  background(247, 193, 218);
+  int total = 0;
   for(int j = 130; j <= 430; j = j + 150){
     for(int i = 130; i <= 430; i += 150){
       Die cube = new Die(i,j);
       cube.show();
+      total = total + cube.num;
     }
   }
-  
+  fill(242, 53, 141);
+  text(total, 300, 550);
 }
 void mousePressed()
 {
@@ -89,7 +92,5 @@ class Die //models one single dice cube
     textSize(20);
     fill(242, 53, 141);
     text("The total is: ", 200, 550);
-    //int total = 0 + num;
-    //text(total, 300, 550);
   }
 }
